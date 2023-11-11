@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public class AIMovement : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class AIMovement : MonoBehaviour
     private float hideTime = 0.5f;
 
     // Hide Private Settings
-    private GameObject[] hidingSpots;
+    public GameObject[] hidingSpots;
 
     // Movement States
     public enum MovementState
@@ -44,6 +45,7 @@ public class AIMovement : MonoBehaviour
     }
 
     public MovementState currentState;
+    private Vector3 hideValue;
 
     // Start is called before the first frame update
     void Start()
@@ -56,6 +58,8 @@ public class AIMovement : MonoBehaviour
         animator.SetBool("IsWalking", true);
         animator.SetBool("IsIdle", false);
         animator.SetBool("IsRunning", false);
+
+        hideValue = Vector3.zero;
 
         currentState = MovementState.WANDER;
     }
@@ -194,8 +198,15 @@ public class AIMovement : MonoBehaviour
         hideCol.Raycast(backRay, out info, distance);
         
         // Seek to the point of collision adjusted by the chosen direction
-        Seek(info.point + chosenDir.normalized);
+        hideValue = info.point + chosenDir.normalized;
 
+        Seek(hideValue);
+
+    }
+
+    public Vector3 HideValue()
+    {
+        return hideValue;
     }
 
     private void SearchForDestination()
