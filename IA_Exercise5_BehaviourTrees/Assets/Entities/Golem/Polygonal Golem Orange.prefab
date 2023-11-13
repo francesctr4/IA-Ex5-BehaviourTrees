@@ -1803,8 +1803,6 @@ GameObject:
   - component: {fileID: 5969175078173187657}
   - component: {fileID: 1061245088228232919}
   - component: {fileID: 8860049180869699904}
-  - component: {fileID: 549173226699160201}
-  - component: {fileID: 1703041639291493317}
   m_Layer: 0
   m_Name: Polygonal Golem Orange
   m_TagString: Untagged
@@ -1840,7 +1838,7 @@ Transform:
   - {fileID: 1160454971453098326}
   - {fileID: 7005852002890875019}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1061245088228232919
 Animator:
@@ -1885,38 +1883,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &549173226699160201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6920988979222396861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2336a6ec9a5e7734a920ad03d512e1af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  navMeshLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  range: 4
-  waitingTime: 2
---- !u!114 &1703041639291493317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6920988979222396861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90df5c8d2e48bcb4d8a9537abb0ff3ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 223087187128165421}
-  target: {fileID: 0}
-  playerDetected: 0
 --- !u!1 &7223857706748817621
 GameObject:
   m_ObjectHideFlags: 0
