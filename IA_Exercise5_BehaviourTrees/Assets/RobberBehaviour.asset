@@ -15,7 +15,7 @@ MonoBehaviour:
   brickName: Assets/RobberBehaviour.asset
   xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
     version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
-    id=\"0\" guid=\"b1a8686d801486447bf95338d05c38ca\" nextId=\"12\">\r\n      <root>\r\n       
+    id=\"0\" guid=\"b1a8686d801486447bf95338d05c38ca\" nextId=\"13\">\r\n      <root>\r\n       
     <SequenceNode id=\"1\" />\r\n      </root>\r\n      <inputParams>\r\n       
     <inputValues>\r\n          <entry name=\"Treasure\" type=\"UnityEngine.GameObject\"
     isBlackboard=\"False\" />\r\n          <entry name=\"Floor\" type=\"UnityEngine.GameObject\"
@@ -131,12 +131,12 @@ MonoBehaviour:
     <BehaviorTree id=\"0\" />\r\n          <ConditionNode id=\"6\" />\r\n         
     <RepeatUntilSuccess id=\"5\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionNode>\r\n   
     <ActionNode id=\"9\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"622.8911 847.6681\" name=\"MyActions/Hide\" description=\"Get the
+    position=\"620.8911 855.6681\" name=\"MyActions/Hide\" description=\"Get the
     Vector3 for hiding.\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ActionNode id=\"9\" />\r\n          <SequenceNode id=\"8\"
     />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <ActionNode
     id=\"11\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"818 852\" name=\"Navigation/MoveToPosition\" description=\"Moves the
+    position=\"794 856\" name=\"Navigation/MoveToPosition\" description=\"Moves the
     game object to a given position by using a NavMeshAgent\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"11\" />\r\n         
     <SequenceNode id=\"8\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   

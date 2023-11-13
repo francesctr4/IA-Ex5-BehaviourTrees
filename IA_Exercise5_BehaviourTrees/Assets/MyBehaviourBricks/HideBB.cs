@@ -2,7 +2,7 @@ using UnityEngine;
 using Pada1.BBCore;           // Code attributes
 using Pada1.BBCore.Tasks;     // TaskStatus
 using Pada1.BBCore.Framework; // BasePrimitiveAction
-using static AIMovement;
+using UnityEngine.AI;
 
 [Action("MyActions/Hide")]
 [Help("Get the Vector3 for hiding.")]
@@ -19,6 +19,23 @@ public class HideBB : BasePrimitiveAction
     public override TaskStatus OnUpdate()
     {
         AIMovement moves = targetGameobject.GetComponent<AIMovement>();
+        Animator animator = targetGameobject.GetComponent<Animator>();
+        NavMeshAgent navMeshAgent = targetGameobject.GetComponent<NavMeshAgent>();
+
+        navMeshAgent.speed = 4;
+
+        if (navMeshAgent.remainingDistance < 0.2)
+        {
+            animator.SetBool("IsIdle", true);
+            animator.SetBool("IsWalking", false);
+            animator.SetBool("IsRunning", false);
+        }
+        else
+        {
+            animator.SetBool("IsRunning", true);
+            animator.SetBool("IsWalking", false);
+            animator.SetBool("IsIdle", false);
+        }
 
         moves.Hide();
         

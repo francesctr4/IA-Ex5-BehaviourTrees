@@ -57,6 +57,15 @@ namespace BBUnity.Actions
                 return TaskStatus.COMPLETED;
             else if (navAgent.destination != targetTransform.position)
                 navAgent.SetDestination(targetTransform.position);
+
+            navAgent.speed = 4;
+
+            Animator animator = gameObject.GetComponent<Animator>();
+
+            animator.SetBool("IsWalking", false);
+            animator.SetBool("IsIdle", false);
+            animator.SetBool("IsRunning", true);
+
             return TaskStatus.RUNNING;
         }
         /// <summary>Abort method of MoveToGameObject </summary>
