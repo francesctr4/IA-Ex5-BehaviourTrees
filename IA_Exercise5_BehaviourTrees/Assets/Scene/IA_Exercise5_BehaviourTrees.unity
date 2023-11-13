@@ -28645,6 +28645,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Liam
       objectReference: {fileID: 0}
+    - target: {fileID: 4857472719506523343, guid: a88d2a960b5445d4f862ac72ba3af13c, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5920209310505998789, guid: a88d2a960b5445d4f862ac72ba3af13c, type: 3}
       propertyPath: m_Radius
       value: 0.3

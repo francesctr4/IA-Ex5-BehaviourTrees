@@ -45,11 +45,24 @@ namespace BBUnity.Actions
             if (!navAgent.pathPending && navAgent.remainingDistance <= navAgent.stoppingDistance)
                 return TaskStatus.COMPLETED;
 
-            navAgent.speed = 1;
+            if (gameObject.CompareTag("Player"))
+            {
+                navAgent.speed = 1;
+            }
+            else
+            {
+                navAgent.speed = 2;
+            }
 
             Animator animator = gameObject.GetComponent<Animator>();
 
             animator.SetBool("IsWalking", true);
+
+            if (gameObject.CompareTag("Player"))
+            {
+                animator.SetBool("IsRunning", false);
+                animator.SetBool("IsIdle", false);
+            }
 
             return TaskStatus.RUNNING;
         }
