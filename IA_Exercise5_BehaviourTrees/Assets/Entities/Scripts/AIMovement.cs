@@ -45,7 +45,7 @@ public class AIMovement : MonoBehaviour
     }
 
     public MovementState currentState;
-    private Vector3 hideValue;
+    public Vector3 hideValue;
 
     // Start is called before the first frame update
     void Start()
@@ -156,7 +156,7 @@ public class AIMovement : MonoBehaviour
 
     public void Hide()
     {
-        animator.SetBool("IsRunning", true);
+        hidingSpots = GameObject.FindGameObjectsWithTag("HidingSpot");
 
         // Initialize variables
         float dist = Mathf.Infinity;
@@ -200,7 +200,7 @@ public class AIMovement : MonoBehaviour
         // Seek to the point of collision adjusted by the chosen direction
         hideValue = info.point + chosenDir.normalized;
 
-        Seek(hideValue);
+        //Seek(info.point + chosenDir.normalized);
 
     }
 

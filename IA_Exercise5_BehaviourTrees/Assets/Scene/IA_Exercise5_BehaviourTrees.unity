@@ -29949,11 +29949,13 @@ MonoBehaviour:
     - {fileID: 187999826}
     - {fileID: 793695085}
     - {fileID: 1437258099}
+    - {fileID: 1437258099}
     objectParamsNames:
     - Treasure
     - Floor
     - Cop
     - Robber
+    - hideTarget
     objectParamsLostDefaultValue: 
     layerMaskParams: []
     layerMaskParamsNames: []
@@ -29963,10 +29965,8 @@ MonoBehaviour:
     vector2Params: []
     vector2ParamsNames: []
     vector2ParamsLostDefaultValue: 
-    vector3Params:
-    - {x: 0, y: 0, z: 0}
-    vector3ParamsNames:
-    - Hide
+    vector3Params: []
+    vector3ParamsNames: []
     vector3ParamsLostDefaultValue: 
     vector4Params: []
     vector4ParamsNames: []

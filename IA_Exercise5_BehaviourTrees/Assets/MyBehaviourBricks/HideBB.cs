@@ -2,6 +2,7 @@ using UnityEngine;
 using Pada1.BBCore;           // Code attributes
 using Pada1.BBCore.Tasks;     // TaskStatus
 using Pada1.BBCore.Framework; // BasePrimitiveAction
+using static AIMovement;
 
 [Action("MyActions/Hide")]
 [Help("Get the Vector3 for hiding.")]
@@ -17,8 +18,11 @@ public class HideBB : BasePrimitiveAction
 
     public override TaskStatus OnUpdate()
     {
-        AIMovement moves = targetGameobject.GetComponent<AIMovement>(); 
-        hide = moves.HideValue();
+        AIMovement moves = targetGameobject.GetComponent<AIMovement>();
+
+        moves.Hide();
+        
+        hide = moves.hideValue;
 
         return TaskStatus.COMPLETED;
     }
